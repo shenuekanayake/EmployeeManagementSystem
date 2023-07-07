@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salaries));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.SalUpdatebtn = new System.Windows.Forms.Button();
+            this.SalAddbtn = new System.Windows.Forms.Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,11 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.SalDaystxt = new System.Windows.Forms.TextBox();
+            this.SalPeriodtime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Logoutlbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.SalListdgv = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SalEmpNamecom = new System.Windows.Forms.ComboBox();
+            this.SalAmounttxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SalListdgv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -74,81 +79,65 @@
             this.panel2.Size = new System.Drawing.Size(1153, 20);
             this.panel2.TabIndex = 46;
             // 
-            // button2
+            // SalUpdatebtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button2.Location = new System.Drawing.Point(171, 608);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 42);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.SalUpdatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SalUpdatebtn.FlatAppearance.BorderSize = 0;
+            this.SalUpdatebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.SalUpdatebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.SalUpdatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalUpdatebtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.SalUpdatebtn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.SalUpdatebtn.Location = new System.Drawing.Point(171, 608);
+            this.SalUpdatebtn.Name = "SalUpdatebtn";
+            this.SalUpdatebtn.Size = new System.Drawing.Size(106, 42);
+            this.SalUpdatebtn.TabIndex = 45;
+            this.SalUpdatebtn.Text = "Update";
+            this.SalUpdatebtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // SalAddbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button1.Location = new System.Drawing.Point(42, 608);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 42);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.Highlight;
-            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(30, 515);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(258, 36);
-            this.guna2DateTimePicker1.TabIndex = 42;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 6, 28, 12, 42, 53, 226);
+            this.SalAddbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SalAddbtn.FlatAppearance.BorderSize = 0;
+            this.SalAddbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.SalAddbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.SalAddbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalAddbtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.SalAddbtn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.SalAddbtn.Location = new System.Drawing.Point(42, 608);
+            this.SalAddbtn.Name = "SalAddbtn";
+            this.SalAddbtn.Size = new System.Drawing.Size(106, 42);
+            this.SalAddbtn.TabIndex = 44;
+            this.SalAddbtn.Text = "Add";
+            this.SalAddbtn.UseVisualStyleBackColor = false;
+            this.SalAddbtn.Click += new System.EventHandler(this.SalAddbtn_Click_1);
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(354, 197);
@@ -219,9 +208,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
             this.label3.Location = new System.Drawing.Point(26, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(136, 21);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Employee ";
+            this.label3.Text = "Employee Name";
             // 
             // label1
             // 
@@ -255,41 +244,30 @@
             this.panel1.Size = new System.Drawing.Size(1153, 65);
             this.panel1.TabIndex = 28;
             // 
-            // comboBox3
+            // SalDaystxt
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox3.Location = new System.Drawing.Point(30, 304);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(258, 29);
-            this.comboBox3.TabIndex = 47;
+            this.SalDaystxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalDaystxt.Location = new System.Drawing.Point(30, 375);
+            this.SalDaystxt.Name = "SalDaystxt";
+            this.SalDaystxt.Size = new System.Drawing.Size(258, 29);
+            this.SalDaystxt.TabIndex = 48;
             // 
-            // textBox1
+            // SalPeriodtime
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(30, 375);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 29);
-            this.textBox1.TabIndex = 48;
-            // 
-            // guna2DateTimePicker3
-            // 
-            this.guna2DateTimePicker3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.guna2DateTimePicker3.CheckedState.Parent = this.guna2DateTimePicker3;
-            this.guna2DateTimePicker3.FillColor = System.Drawing.SystemColors.Highlight;
-            this.guna2DateTimePicker3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.guna2DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker3.HoverState.Parent = this.guna2DateTimePicker3;
-            this.guna2DateTimePicker3.Location = new System.Drawing.Point(30, 446);
-            this.guna2DateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker3.Name = "guna2DateTimePicker3";
-            this.guna2DateTimePicker3.ShadowDecoration.Parent = this.guna2DateTimePicker3;
-            this.guna2DateTimePicker3.Size = new System.Drawing.Size(258, 36);
-            this.guna2DateTimePicker3.TabIndex = 49;
-            this.guna2DateTimePicker3.Value = new System.DateTime(2023, 6, 28, 12, 42, 53, 226);
+            this.SalPeriodtime.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SalPeriodtime.CheckedState.Parent = this.SalPeriodtime;
+            this.SalPeriodtime.FillColor = System.Drawing.SystemColors.Highlight;
+            this.SalPeriodtime.ForeColor = System.Drawing.Color.DarkBlue;
+            this.SalPeriodtime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.SalPeriodtime.HoverState.Parent = this.SalPeriodtime;
+            this.SalPeriodtime.Location = new System.Drawing.Point(30, 446);
+            this.SalPeriodtime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.SalPeriodtime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.SalPeriodtime.Name = "SalPeriodtime";
+            this.SalPeriodtime.ShadowDecoration.Parent = this.SalPeriodtime;
+            this.SalPeriodtime.Size = new System.Drawing.Size(258, 36);
+            this.SalPeriodtime.TabIndex = 49;
+            this.SalPeriodtime.Value = new System.DateTime(2023, 6, 28, 12, 42, 53, 226);
             // 
             // pictureBox5
             // 
@@ -301,16 +279,17 @@
             this.pictureBox5.TabIndex = 58;
             this.pictureBox5.TabStop = false;
             // 
-            // label8
+            // Logoutlbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(974, 92);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 21);
-            this.label8.TabIndex = 55;
-            this.label8.Text = "Logout";
+            this.Logoutlbl.AutoSize = true;
+            this.Logoutlbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutlbl.ForeColor = System.Drawing.Color.DarkBlue;
+            this.Logoutlbl.Location = new System.Drawing.Point(974, 92);
+            this.Logoutlbl.Name = "Logoutlbl";
+            this.Logoutlbl.Size = new System.Drawing.Size(64, 21);
+            this.Logoutlbl.TabIndex = 55;
+            this.Logoutlbl.Text = "Logout";
+            this.Logoutlbl.Click += new System.EventHandler(this.Logoutlbl_Click);
             // 
             // pictureBox4
             // 
@@ -386,14 +365,97 @@
             this.label11.TabIndex = 52;
             this.label11.Text = " Manage  Salary";
             // 
+            // SalListdgv
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.SalListdgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.SalListdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SalListdgv.BackgroundColor = System.Drawing.Color.White;
+            this.SalListdgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SalListdgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SalListdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SalListdgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.SalListdgv.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SalListdgv.DefaultCellStyle = dataGridViewCellStyle12;
+            this.SalListdgv.EnableHeadersVisualStyles = false;
+            this.SalListdgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SalListdgv.Location = new System.Drawing.Point(337, 210);
+            this.SalListdgv.Name = "SalListdgv";
+            this.SalListdgv.RowHeadersVisible = false;
+            this.SalListdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SalListdgv.Size = new System.Drawing.Size(787, 457);
+            this.SalListdgv.TabIndex = 61;
+            this.SalListdgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.SalListdgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.SalListdgv.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.SalListdgv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.SalListdgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.SalListdgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.SalListdgv.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.SalListdgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SalListdgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.SalListdgv.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SalListdgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalListdgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.SalListdgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SalListdgv.ThemeStyle.HeaderStyle.Height = 25;
+            this.SalListdgv.ThemeStyle.ReadOnly = false;
+            this.SalListdgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.SalListdgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SalListdgv.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalListdgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.SalListdgv.ThemeStyle.RowsStyle.Height = 22;
+            this.SalListdgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SalListdgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SalListdgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepList_CellContentClick);
+            // 
+            // SalEmpNamecom
+            // 
+            this.SalEmpNamecom.FormattingEnabled = true;
+            this.SalEmpNamecom.Location = new System.Drawing.Point(30, 305);
+            this.SalEmpNamecom.Name = "SalEmpNamecom";
+            this.SalEmpNamecom.Size = new System.Drawing.Size(258, 29);
+            this.SalEmpNamecom.TabIndex = 62;
+            this.SalEmpNamecom.SelectionChangeCommitted += new System.EventHandler(this.SalAddbtn_Click);
+            // 
+            // SalAmounttxt
+            // 
+            this.SalAmounttxt.BackColor = System.Drawing.Color.White;
+            this.SalAmounttxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SalAmounttxt.Enabled = false;
+            this.SalAmounttxt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalAmounttxt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.SalAmounttxt.Location = new System.Drawing.Point(30, 524);
+            this.SalAmounttxt.Name = "SalAmounttxt";
+            this.SalAmounttxt.Size = new System.Drawing.Size(258, 22);
+            this.SalAmounttxt.TabIndex = 63;
+            this.SalAmounttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1153, 704);
+            this.Controls.Add(this.SalAmounttxt);
+            this.Controls.Add(this.SalEmpNamecom);
+            this.Controls.Add(this.SalListdgv);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Logoutlbl);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox3);
@@ -401,13 +463,11 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.guna2DateTimePicker3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.SalPeriodtime);
+            this.Controls.Add(this.SalDaystxt);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.SalUpdatebtn);
+            this.Controls.Add(this.SalAddbtn);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -417,7 +477,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Salaries";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salaries";
@@ -429,6 +489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SalListdgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,9 +498,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Button SalUpdatebtn;
+        private System.Windows.Forms.Button SalAddbtn;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
@@ -448,11 +508,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker3;
+        private System.Windows.Forms.TextBox SalDaystxt;
+        private Guna.UI2.WinForms.Guna2DateTimePicker SalPeriodtime;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Logoutlbl;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -460,5 +519,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2DataGridView SalListdgv;
+        private System.Windows.Forms.ComboBox SalEmpNamecom;
+        private System.Windows.Forms.TextBox SalAmounttxt;
     }
 }
