@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagementSystem
 {
-    internal class Functions
+    public class Functions
     {
         // private SqlConnection Con;
         //  private SqlCommand cmd;

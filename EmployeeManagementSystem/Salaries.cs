@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace EmployeeManagementSystem
 {
@@ -86,43 +88,40 @@ namespace EmployeeManagementSystem
 
 
 
-
-
-
         int d = 1;
         private void SalAddbtn_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (SalEmpNamecom.SelectedIndex == -1 || SalDaystxt.Text == "" || SalPeriodtime.Text == "")
-                {
-                    MessageBox.Show("Missing data !!!!");
-                
-                
-                }
-                else
-                {
-                    Period = SalPeriodtime.Value.Date.Month.ToString() + " - " + SalPeriodtime.Value.Date.Year.ToString();
-                    int Amount = DSal * Convert.ToInt32(SalDaystxt.Text);
-                    int sal_days = Convert.ToInt32(SalDaystxt.Text);
+                /* if (SalEmpNamecom.SelectedIndex == -1 || SalDaystxt.Text == "" || SalPeriodtime.Text == "")
+                 {
+                    // MessageBox.Show("Missing data !!!!");
 
-                    string Query = ("insert into SalaryTbl values({0} , {1} , '{2}' , {3} , '{4}' )");
-                    Query = string.Format(Query, SalEmpNamecom.ToString(), sal_days, Period, Amount, DateTime.Today.Date );
-                    con.SetData(Query);
-                    ShowSalaries();
 
-                    MessageBox.Show("Salary Paid !!!");
-                    SalDaystxt.Text = "";
-                  
-                }
-                
+                 }
+                 else
+                 {*/
+                Period = SalPeriodtime.Value.Date.Month.ToString() + " - " + SalPeriodtime.Value.Date.Year.ToString();
+                int Amount = DSal * Convert.ToInt32(SalDaystxt.Text);
+                int sal_days = Convert.ToInt32(SalDaystxt.Text);
+
+                string Query = "insert into SalaryTbl values(2 , 5 , '02/03/2023' , 5000 , '05/05/2023' )";
+                // Query = string.Format(Query, SalEmpNamecom.ToString(), sal_days, Period, Amount, DateTime.Today.Date );
+                con.SetData(Query);
+                ShowSalaries();
+
+                MessageBox.Show("Salary Paid !!!");
+                SalDaystxt.Text = "";
+
+                // }
+
             }
             catch (Exception Ex)
             {
 
                 MessageBox.Show(Ex.Message);
             }
-           
+
         }
 
         private void Logoutlbl_Click(object sender, EventArgs e)
